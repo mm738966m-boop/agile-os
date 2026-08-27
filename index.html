@@ -175,6 +175,20 @@ h2{
 .contact .inner{padding:80px 24px;text-align:center}
 .contact h2{color:#fff}
 .contact p{margin:0 auto 36px;max-width:34em;color:rgba(255,255,255,.75);font-size:14.5px}
+.cform{max-width:560px;margin:0 auto 44px;text-align:left}
+.cform label{display:block;font-size:12.5px;letter-spacing:.1em;color:rgba(255,255,255,.85);margin:20px 0 7px}
+.cform .req{color:var(--gold);font-size:10.5px;margin-left:8px;letter-spacing:.12em}
+.cform input,.cform textarea{width:100%;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.3);color:#fff;padding:12px 14px;font-size:16px;border-radius:2px;font-family:inherit;transition:border-color .2s,background .2s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+.cform textarea{min-height:150px;resize:vertical}
+.cform .hp-field{position:absolute;left:-9999px;top:auto;height:1px;overflow:hidden}
+.cform button{display:block;margin:32px auto 0;background:#fff;color:var(--navy);border:1px solid #fff;padding:14px 60px;font-size:13.5px;letter-spacing:.24em;cursor:pointer;font-family:inherit;transition:background .2s}
+.cform button:hover,.cform button:focus-visible{background:rgba(255,255,255,.85)}
+.cform button:disabled{opacity:.55;cursor:default}
+.cform-note{font-size:12px;color:rgba(255,255,255,.55);margin-top:14px;text-align:center;letter-spacing:.04em}
+.cform-error{display:none;margin-top:18px;font-size:13px;color:#F2C9C9;text-align:center;line-height:1.9}
+.cform-error a{color:#fff}
+.cform-done{display:none;max-width:34em;margin:0 auto 44px;padding:34px 24px;border:1px solid rgba(255,255,255,.3);font-size:14.5px;line-height:2;color:rgba(255,255,255,.9)}
 
 footer{border-top:1px solid var(--line);background:var(--paper)}
 footer .inner{padding:30px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -356,6 +370,27 @@ footer small{font-size:11.5px;letter-spacing:.08em;color:var(--ink-3)}
     <p class="sec-label" style="justify-content:center;color:rgba(255,255,255,.65)">CONTACT</p>
     <h2>お問い合わせ</h2>
     <p>事業のご相談・協業のご提案など、お気軽にご連絡ください。<br>お名刺をお持ちの方は、記載の担当者まで直接ご連絡いただけます。</p>
+    <form class="cform" id="contact-form" novalidate>
+      <label for="cf-name">お名前<span class="req">必須</span></label>
+      <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100">
+      <label for="cf-company">会社名・団体名</label>
+      <input id="cf-company" name="company" type="text" autocomplete="organization" maxlength="100">
+      <label for="cf-email">メールアドレス<span class="req">必須</span></label>
+      <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200">
+      <label for="cf-message">お問い合わせ内容<span class="req">必須</span></label>
+      <textarea id="cf-message" name="message" required maxlength="5000"></textarea>
+      <div class="hp-field" aria-hidden="true">
+        <label for="cf-website">Website</label>
+        <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit">送信する</button>
+      <p class="cform-note">いただいた内容は担当者が確認し、メールでご返信いたします。</p>
+      <p class="cform-error" id="cf-error">送信できませんでした。お手数ですが、時間をおいて再度お試しください。</p>
+    </form>
+    <div class="cform-done" id="cf-done">
+      お問い合わせを受け付けました。<br>
+      内容を確認のうえ、担当者よりご連絡いたします。
+    </div>
     <p style="font-size:13.5px;color:rgba(255,255,255,.6);margin:0">〒192-0065　東京都八王子市新町2-5　コスモリード八王子</p>
   </div>
 </div>
@@ -370,4 +405,41 @@ footer small{font-size:11.5px;letter-spacing:.08em;color:var(--ink-3)}
 document.querySelectorAll('.mnav .panel a').forEach(a=>{
   a.addEventListener('click',()=>{document.querySelector('.mnav').removeAttribute('open')});
 });
+
+(function(){
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbxZGjRChv0uIR0_iB8SRolDW8Qfm8ubuTdiaPHlpvmyh6PVFpTEQoQYZMhy-BaLU4fSJg/exec";
+  var form = document.getElementById('contact-form');
+  if(!form) return;
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(!form.reportValidity()) return;
+    var el = form.elements;
+    var payload = JSON.stringify({
+      name: el['name'].value,
+      company: el['company'].value,
+      email: el['email'].value,
+      message: el['message'].value,
+      website: el['website'].value
+    });
+    var btn = form.querySelector('button');
+    var err = document.getElementById('cf-error');
+    btn.disabled = true; btn.textContent = '送信中…'; err.style.display = 'none';
+    var opts = { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: payload };
+    function done(){
+      form.style.display = 'none';
+      document.getElementById('cf-done').style.display = 'block';
+    }
+    function fail(){
+      btn.disabled = false; btn.textContent = '送信する';
+      err.style.display = 'block';
+    }
+    fetch(ENDPOINT, opts)
+      .then(function(r){ return r.json(); })
+      .then(function(res){ res && res.ok ? done() : fail(); })
+      .catch(function(){
+        var o = { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: payload };
+        fetch(ENDPOINT, o).then(done, fail);
+      });
+  });
+})();
 </script>
