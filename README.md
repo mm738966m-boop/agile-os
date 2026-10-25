@@ -1,10 +1,9 @@
-# 合同会社AGILE コーポレートサイト
+# 合同会社AGILE コーポレートサイト（agile-os.jp）
 
-https://agile-os.jp
+GitHub Pages で公開（main直下・独自ドメインは CNAME）。
 
-- `index.html` … サイト本体（1ファイル完結・画像はdata URIで内包）
-- `CNAME` … 独自ドメイン設定（GitHub Pagesが参照）
+このリポジトリにあるのは公開用のファイルだけです。文章を直すときの元ファイル（src/）と組み立ての道具（tools/build.py）は、森川のPCの次のフォルダにあります。
+~/Desktop/AGILE/06_ブランド・名刺/コーポレートサイト_新版_261024/site/
 
-## 更新方法
-`index.html` を書き換えて push すると、数分で反映されます。
-生成元のテンプレートは `~/Desktop/AGILE/06_ブランド・名刺/名刺/hp-template.html`。
+直し方：src/index.html を直す → `python tools/build.py` → できた index.html・privacy.html と css・js・img をここに写して push。
+登記が済んだら「設立準備中」「2026年11月 登記予定」の表記をすべて外すこと。
