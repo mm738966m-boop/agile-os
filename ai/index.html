@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AI実装研修｜合同会社AGILE</title>
+<meta name="description" content="毎月の事務仕事を、AIに任せるところから。御社の実際の仕事を教材に、2〜4名で12時間。合同会社AGILEのAI実装研修のご案内です。">
+<meta property="og:title" content="AI実装研修｜合同会社AGILE">
+<meta property="og:description" content="御社の実際の仕事を教材に、2〜4名で12時間。まずは無料の診断から。">
+<meta property="og:image" content="https://agile-os.jp/img/og.png">
+<link rel="icon" href="https://agile-os.jp/img/favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Shippori+Mincho+B1:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap');
+:root{--ink:#111318;--ink2:#3A3F48;--mute:#5A5F69;--hair:#DCDCD8;--bg:#fff;--panel:#F4F4F1;--ai:#16244A;--ai2:#20325F;--deep:#0B1226;--ail:#E9EDF5;--sky:#3A6EA5;--on:#F2F3F6;--on2:#C3CADA;--cta:#06C755;--cta2:#05A847;
+--serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;--sans:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;--latin:"Cormorant Garamond","Times New Roman",serif;color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.85;overflow-x:hidden}
+@media(min-width:960px){body{font-size:19px}}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;margin:0;line-height:1.45;text-wrap:balance;word-break:auto-phrase}
+p,li,dd{text-wrap:pretty;word-break:auto-phrase}
+p{margin:0 0 1em}p:last-child{margin-bottom:0}
+.nw{white-space:nowrap}
+.num{font-family:var(--latin);font-feature-settings:"lnum" 1,"pnum" 1;font-weight:600}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+@media(min-width:720px){.wrap{padding:0 40px}}
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+.brand b{font-family:var(--latin);font-size:26px;letter-spacing:.14em;font-weight:600;color:var(--ai)}
+.brand span{font-size:13px;color:var(--mute);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:56px;padding:14px 28px;border-radius:999px;background:var(--cta);color:#fff;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 8px 20px -8px rgba(6,199,85,.6);transition:transform .2s,background .2s;font-family:var(--sans)}
+.btn:hover{background:var(--cta2);transform:translateY(-2px)}
+.btn.sm{white-space:nowrap;min-height:44px;padding:8px 18px;font-size:16px;box-shadow:none}
+.btn.ghost{background:transparent;color:var(--ai);border:1.5px solid var(--ai);box-shadow:none}
+.btn.ghost:hover{background:var(--ail)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.eyebrow{display:inline-block;font-family:var(--latin);letter-spacing:.22em;font-size:15px;color:var(--sky);font-weight:600;text-transform:uppercase}
+.sec{padding:72px 0}
+@media(min-width:960px){.sec{padding:104px 0}}
+.sec h2{font-size:clamp(26px,4.6vw,40px);margin:.3em 0 .6em}
+.lead{font-size:clamp(18px,2.2vw,20px);color:var(--ink2);max-width:40em}
+.panel{background:var(--panel)}
+.note{font-size:16px;color:var(--mute)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.1,1),transform .8s cubic-bezier(.2,.7,.1,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.ft{background:var(--deep);color:var(--on2);padding:48px 0 40px;font-size:15px}
+.ft b{color:var(--on);font-family:var(--latin);letter-spacing:.14em;font-size:22px}
+.ft a{color:var(--on)}
+.ft p{margin:.4em 0}
+@media print{.rv{opacity:1;transform:none}.bar,.noprint{display:none!important}}
+@media(max-width:719px){br.pc{display:none}}
+@media(max-width:420px){.brand span{display:none}}
+
+.fv{position:relative;background:linear-gradient(160deg,var(--deep) 0%,var(--ai) 55%,var(--ai2) 100%);color:var(--on);overflow:hidden;padding:64px 0 72px}
+@media(min-width:960px){.fv{padding:104px 0 112px}}
+.fv::before{content:"";position:absolute;inset:-30% -10% auto auto;width:70vw;height:70vw;max-width:760px;max-height:760px;border-radius:50%;background:radial-gradient(circle,rgba(58,110,165,.55),transparent 65%);animation:glow 9s ease-in-out infinite alternate;pointer-events:none}
+@keyframes glow{to{transform:translate(-8%,10%) scale(1.1)}}
+.fv .wrap{position:relative}
+.fv .eyebrow{color:#9DB7DA}
+.fv h1{font-size:clamp(32px,6.4vw,58px);line-height:1.38;margin:.35em 0 .5em;color:#fff;letter-spacing:.02em}
+.fv h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(58,110,165,.75) 62%)}
+.fv .lead{color:var(--on2);max-width:34em}
+.fv .acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;align-items:center}
+.fv .acts .ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.fv .acts .ghost:hover{background:rgba(255,255,255,.08)}
+.fv .tags{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:34px;padding:0;list-style:none;font-size:15px}
+.fv .tags li{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:4px 14px;color:var(--on)}
+#dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.fvg{position:relative;display:grid;gap:36px;align-items:center}
+@media(min-width:980px){.fvg{grid-template-columns:1.15fr .85fr}}
+.demo{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:16px 18px 18px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6);transform:perspective(900px) rotateY(-6deg);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:perspective(900px) rotateY(-6deg) translateY(-8px)}}
+@media(max-width:979px){.demo{transform:none;animation:none}}
+.dh{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--on2);margin-bottom:10px}
+.dh span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25)}
+.dh b{margin-left:8px;color:#fff}.dh em{margin-left:auto;font-style:normal;color:#9DE6B8}
+.db{background:#fff;color:var(--ink);border-radius:12px;padding:14px 16px;min-height:212px;font-size:15px;line-height:1.75;white-space:pre-wrap}
+.db .cur{display:inline-block;width:2px;height:1.1em;background:var(--sky);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.dp{height:4px;border-radius:4px;background:rgba(255,255,255,.15);margin:12px 0 10px;overflow:hidden}
+.dp i{display:block;height:100%;width:0;background:linear-gradient(90deg,#9DB7DA,#06C755);transition:width .3s}
+.dok{opacity:0;transform:translateY(6px);transition:all .5s;display:inline-block;background:#06C755;color:#fff;border-radius:999px;padding:4px 14px;font-weight:700;font-size:15px}
+.dok.in{opacity:1;transform:none}
+.demo small{display:block;color:var(--on2);font-size:13px;margin-top:10px}
+.price article.main{background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--a,0deg),#16244A,#3A6EA5,#9DB7DA,#3A6EA5,#16244A) border-box;border:2px solid transparent;animation:spin 6s linear infinite}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes spin{to{--a:360deg}}
+.diff article,.flow4 li,.price article,.pains li{transition:transform .3s cubic-bezier(.2,.7,.1,1),box-shadow .3s}
+.diff article:hover,.flow4 li:hover,.price article:hover,.pains li:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(22,36,74,.45)}
+@media(prefers-reduced-motion:reduce){.demo,.price article.main{animation:none}}
+.line{position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--sky),transparent);background-size:200% 100%;animation:run 6s linear infinite}
+@keyframes run{from{background-position:200% 0}to{background-position:-200% 0}}
+.pains{display:grid;gap:14px;margin:28px 0 22px;padding:0;list-style:none}
+@media(min-width:720px){.pains{grid-template-columns:1fr 1fr}}
+.pains li{background:#fff;border:1px solid var(--hair);border-radius:16px;padding:18px 20px 18px 54px;position:relative;font-weight:700}
+.pains li::before{content:"";position:absolute;left:20px;top:24px;width:18px;height:18px;border-radius:50%;border:2px solid var(--sky)}
+.diff{display:grid;gap:18px;margin-top:30px}
+@media(min-width:900px){.diff{grid-template-columns:repeat(3,1fr)}}
+.diff article{border-top:2px solid var(--ai);padding:22px 4px 0}
+.diff .n{font-family:var(--latin);font-size:46px;line-height:1;color:var(--sky)}
+.diff h3{font-size:22px;margin:.4em 0 .5em}
+.diff p{color:var(--ink2);font-size:17px}
+.calc{margin-top:30px;background:var(--ai);color:var(--on);border-radius:20px;padding:26px 22px;display:grid;gap:22px}
+@media(min-width:860px){.calc{grid-template-columns:1.2fr 1fr;padding:36px 40px;align-items:center}}
+.calc label{display:block;font-weight:700;margin-bottom:8px}
+.calc input[type=range]{width:100%;accent-color:#9DB7DA;height:32px}
+.calc .v{font-family:var(--latin);font-size:30px;color:#fff}
+.calc .seg{display:flex;flex-wrap:wrap;gap:8px}
+.calc .seg button{flex:1 1 auto;min-height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--on);font:inherit;font-size:16px;cursor:pointer}
+.calc .seg button[aria-pressed=true]{background:#fff;color:var(--ai);font-weight:700}
+.calc .out{text-align:center;border-top:1px solid rgba(255,255,255,.2);padding-top:18px}
+@media(min-width:860px){.calc .out{border-top:0;border-left:1px solid rgba(255,255,255,.2);padding:0 0 0 30px}}
+.calc .big{font-family:var(--latin);font-size:clamp(56px,9vw,84px);line-height:1;color:#fff}
+.calc .out small{display:block;color:var(--on2);font-size:15px;margin-top:10px;text-align:left}
+.flow4{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+@media(min-width:900px){.flow4{grid-template-columns:repeat(4,1fr)}}
+.flow4 li{background:#fff;border-radius:18px;padding:22px 20px;border:1px solid var(--hair);position:relative}
+.flow4 .k{font-family:var(--latin);color:var(--sky);font-size:17px;letter-spacing:.12em}
+.flow4 h3{font-size:20px;margin:.3em 0 .5em}
+.flow4 p{font-size:16px;color:var(--ink2)}
+.after{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none}
+.after li{background:var(--ail);color:var(--ai);border-radius:999px;padding:6px 16px;font-size:16px;font-weight:700}
+.price{display:grid;gap:16px;margin-top:28px}
+.adjust{margin-top:20px;border:1px dashed var(--ai);border-radius:18px;padding:18px 22px;background:#fff}
+.adjust b{font-size:18px;color:var(--ai)}
+.adjust p{margin:.4em 0 0;font-size:16px;color:var(--ink2)}
+@media(min-width:900px){.price{grid-template-columns:1fr 1.15fr 1fr;align-items:stretch}}
+.price article{border:1px solid var(--hair);border-radius:18px;padding:24px 22px;background:#fff;display:flex;flex-direction:column}
+.price article.main{border:2px solid var(--ai);box-shadow:0 18px 40px -24px rgba(22,36,74,.5);position:relative}
+.price .badge{position:absolute;top:-14px;left:22px;background:var(--ai);color:#fff;font-size:14px;font-weight:700;border-radius:999px;padding:3px 14px}
+.price h3{font-size:21px}
+.price .who{font-size:15px;color:var(--mute);margin:.3em 0 .9em}
+.price .yen{font-family:var(--latin);font-size:40px;color:var(--ai);line-height:1.1}
+.price .yen small{font-family:var(--sans);font-size:15px;color:var(--mute);margin-left:4px}
+.price ul{margin:14px 0 0;padding-left:1.1em;font-size:16px;color:var(--ink2)}
+.cont{margin-top:20px;display:grid;gap:12px}
+@media(min-width:720px){.cont{grid-template-columns:1fr 1fr}}
+.cont div{border:1px dashed var(--hair);border-radius:14px;padding:16px 18px;background:#fff}
+.cont b{display:block;color:var(--ai)}
+.cont span{font-family:var(--latin);font-size:26px;color:var(--ai)}
+.team{display:grid;gap:14px;margin-top:26px}
+@media(min-width:900px){.team{grid-template-columns:repeat(3,1fr)}}
+.team div{border-left:3px solid var(--sky);padding:4px 0 4px 16px}
+.team b{font-family:var(--serif);font-size:20px;display:block}
+.team p{font-size:16px;color:var(--ink2);margin:.3em 0 0}
+.faq details{border-bottom:1px solid var(--hair);padding:16px 0}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;position:relative;padding-right:32px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:-2px;font-size:26px;color:var(--sky);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:.8em 0 0;color:var(--ink2);font-size:17px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:26px 0 0}
+.steps li{counter-increment:s;position:relative;padding:0 0 18px 52px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--ai);color:#fff;font-family:var(--latin);font-size:19px;display:grid;place-items:center}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;background:var(--hair)}
+.end{background:linear-gradient(160deg,var(--ai),var(--deep));color:var(--on);text-align:center;border-radius:24px;padding:48px 22px}
+.end h2{color:#fff}
+.end .lead{color:var(--on2);margin:0 auto 26px}
+.end .note{color:var(--on2)}
+.sub{font-size:15px;color:var(--mute);margin-top:12px}
+/* ===== 2026-11-24 見やすさ・新しさの上書き（年齢層が高い読み手向け：文字を大きく・明るく・くっきり） ===== */
+:root{--ink:#0F1B2D;--ink2:#2B3A4F;--mute:#4A5568;--hair:#D5DDE8;--panel:#F2F6FB;--ai:#17325E;--ai2:#1F4A8A;--deep:#0E1F3D;--ail:#E8F0FB;--sky:#2463C6;--on:#F4F7FB;--on2:#D3DCEA;
+--serif:"Zen Kaku Gothic New","BIZ UDPGothic","Hiragino Sans",sans-serif;--latin:"Outfit","Helvetica Neue",Arial,sans-serif;--cta:#0A8A3D;--cta2:#08702F;--r:22px;--sh:0 14px 34px -20px rgba(15,27,45,.35)}
+body{font-size:20px;line-height:1.9;letter-spacing:.01em}
+@media(min-width:960px){body{font-size:21px}}
+h1,h2,h3,h4{font-weight:700;letter-spacing:.02em}
+.num{font-weight:600}
+.bar{background:rgba(255,255,255,.96);border-bottom:1px solid var(--hair)}
+.bar .wrap{height:68px}
+.brand b{font-family:var(--latin);font-weight:700;letter-spacing:.12em;font-size:26px}
+.brand span{font-size:15px}
+.btn{min-height:60px;font-size:20px;padding:14px 30px;border-radius:16px}
+.btn.sm{min-height:48px;font-size:17px;border-radius:12px}
+.btn.ghost{border-width:2px}
+.eyebrow{font-family:var(--latin);letter-spacing:.16em;font-size:15px;font-weight:700;color:var(--sky)}
+.sec h2{font-size:clamp(28px,5vw,42px);font-weight:900;color:var(--ai)}
+.lead{font-size:clamp(19px,2.4vw,22px);color:var(--ink2)}
+.note,.sub,.fine,.small{font-size:17px;color:var(--mute)}
+.panel{background:var(--panel)}
+.ft{font-size:17px}
+
+/* ---------- 案内ページ ---------- */
+.fv{position:relative;overflow:hidden;background:#F6F9FE;color:var(--ink);padding:56px 0 72px}
+@media(min-width:960px){.fv{padding:88px 0 104px}}
+.fv::before,#dust,.line{display:none}
+.mesh{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.mesh::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(23,50,94,.10) 1px,transparent 1.2px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000 0%,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 85%)}
+.mesh i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.75;animation:drift 16s ease-in-out infinite alternate}
+.mesh i:nth-child(1){width:520px;height:520px;right:-120px;top:-160px;background:#BFD6F7}
+.mesh i:nth-child(2){width:420px;height:420px;left:-140px;bottom:-180px;background:#C6EED6;animation-duration:19s}
+.mesh i:nth-child(3){width:300px;height:300px;right:28%;bottom:-120px;background:#E3E9FF;animation-duration:23s}
+@keyframes drift{to{transform:translate(40px,30px) scale(1.12)}}
+.fvg{position:relative;display:grid;gap:44px;align-items:center}
+@media(min-width:1000px){.fvg{grid-template-columns:1.1fr .9fr}}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ai);font-weight:700;font-size:17px;border-radius:999px;padding:8px 18px 8px 14px;box-shadow:var(--sh)}
+.badge b{width:12px;height:12px;border-radius:50%;background:#06C755;box-shadow:0 0 0 0 rgba(6,199,85,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(6,199,85,0)}100%{box-shadow:0 0 0 0 rgba(6,199,85,0)}}
+@media(max-width:999px){.fv h1{font-size:clamp(34px,8.4vw,52px)!important}}
+.fv h1{margin:.5em 0 .45em;color:var(--ai);font-weight:900;font-size:clamp(34px,4.4vw,56px);line-height:1.3;letter-spacing:.02em}
+.fv h1 .ln{display:block;opacity:0;transform:translateY(22px);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.fv h1 .ln:nth-child(2){animation-delay:.15s}.fv h1 .ln:nth-child(3){animation-delay:.35s}.fv h1 .ln:nth-child(4){animation-delay:.5s}
+@keyframes up{to{opacity:1;transform:none}}
+.fv h1 em{font-style:normal;color:var(--sky);background:linear-gradient(transparent 62%,#BFE6CF 62%);background-size:0 100%;background-repeat:no-repeat;animation:mark 1s .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes mark{to{background-size:100% 100%}}
+.fv .lead{color:var(--ink2);font-size:clamp(19px,2.4vw,22px);max-width:32em;opacity:0;animation:up .9s .7s forwards}
+.fv .acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;opacity:0;animation:up .9s .85s forwards}
+.fv .acts .btn:not(.ghost){box-shadow:0 14px 30px -10px rgba(6,199,85,.65)}
+.fv .acts .ghost{color:var(--ai);border-color:var(--ai);background:#fff}
+.fv .acts .ghost:hover{background:var(--ail)}
+.stats{list-style:none;padding:0;margin:34px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:560px;opacity:0;animation:up .9s 1s forwards}
+.stats li{background:#fff;border-radius:20px;box-shadow:var(--sh);padding:16px 12px;text-align:center}
+.stats b{display:block;font-family:var(--latin);font-weight:700;font-size:clamp(36px,6vw,48px);line-height:1;color:var(--sky)}
+.stats span{display:block;margin-top:6px;font-size:16px;font-weight:700;color:var(--ink2);line-height:1.5}
+.fvnote{margin:16px 0 0;font-size:17px;color:var(--mute);opacity:0;animation:up .9s 1.1s forwards}
+.stg{position:relative;padding:56px 0 64px}
+.demo{position:relative;z-index:1;background:#fff;border:1px solid var(--hair);border-radius:24px;padding:18px 20px 20px;box-shadow:0 40px 80px -36px rgba(23,50,94,.55);transform:perspective(1000px) rotateY(-7deg) rotateX(2deg);animation:float 7s ease-in-out infinite;backdrop-filter:none;-webkit-backdrop-filter:none}
+@keyframes float{50%{transform:perspective(1000px) rotateY(-7deg) rotateX(2deg) translateY(-10px)}}
+@media(max-width:999px){.demo{transform:none;animation:none}}
+.dh{color:var(--mute);font-size:16px}.dh span{background:var(--hair)}.dh b{color:var(--ink);font-size:17px}.dh em{color:#07672F;font-weight:700}
+.db{background:var(--panel);color:var(--ink);font-size:17px;border-radius:14px;min-height:230px}
+.dp{background:var(--hair);height:6px}
+.dok{font-size:16px}
+.demo small{color:var(--mute);font-size:15px}
+.fl{position:absolute;z-index:2;background:var(--ai);color:#fff;font-weight:700;font-size:15px;border-radius:999px;padding:8px 15px;box-shadow:0 16px 30px -14px rgba(23,50,94,.7);white-space:nowrap;animation:bob 5s ease-in-out infinite}
+.fl::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#7EE2A8;margin-right:8px;vertical-align:2px}
+.f1{top:0;left:-8px}.f3{top:0;right:-8px;animation-delay:2.4s}.f2{bottom:0;left:22%;animation-delay:1.2s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media(max-width:999px){.stg{padding:0}.fl{position:static;display:inline-block;margin:0 8px 10px 0;animation:none}}
+@media(prefers-reduced-motion:reduce){.fv h1 .ln,.fv .lead,.fv .acts,.stats,.fvnote{opacity:1;transform:none;animation:none}.fv h1 em{background-size:100% 100%;animation:none}.mesh i,.fl,.demo,.badge b{animation:none}}
+.end h2,.sec .end h2{color:#fff}
+.end .lead,.end .note{color:var(--on2)}
+/* 一覧のカードが、少しずつずれて出てくる */
+.rv .pains li,.rv .diff article,.rv .flow4 li,.rv .price article,.rv .team div{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.rv.in .pains li,.rv.in .diff article,.rv.in .flow4 li,.rv.in .price article,.rv.in .team div{opacity:1;transform:none}
+.rv.in :is(.pains,.diff,.flow4,.price,.team)>:nth-child(2){transition-delay:.12s}
+.rv.in :is(.pains,.diff,.flow4,.price,.team)>:nth-child(3){transition-delay:.24s}
+.rv.in :is(.pains,.diff,.flow4,.price,.team)>:nth-child(4){transition-delay:.36s}
+@media(prefers-reduced-motion:reduce){.rv .pains li,.rv .diff article,.rv .flow4 li,.rv .price article,.rv .team div{opacity:1;transform:none}}
+@media print{.rv .pains li,.rv .diff article,.rv .flow4 li,.rv .price article,.rv .team div,.fv h1 .ln,.fv .lead,.fv .acts,.stats,.fvnote{opacity:1;transform:none;animation:none}}
+.pains li{font-size:19px;border-radius:var(--r);box-shadow:var(--sh);border:0;padding:20px 22px 20px 58px}
+.pains li::before{border-color:var(--sky);border-width:3px;top:27px}
+.diff article{background:#fff;border:0;border-radius:var(--r);box-shadow:var(--sh);padding:26px 24px}
+.diff .n{font-family:var(--latin);font-weight:700;font-size:44px}
+.diff h3{font-size:24px;color:var(--ai)}
+.diff p{font-size:19px}
+.calc{border-radius:28px;background:linear-gradient(150deg,var(--ai),var(--ai2))}
+.calc label{font-size:19px}
+.calc .v{font-weight:700}
+.calc .seg button{font-size:18px;min-height:52px}
+.calc .out small{font-size:16px}
+.flow4 li{border:0;border-radius:var(--r);box-shadow:var(--sh)}
+.flow4 .k{font-weight:700}
+.flow4 h3{font-size:22px;color:var(--ai)}
+.flow4 p{font-size:18px}
+.after li{font-size:17px}
+.price article{border:0;border-radius:var(--r);box-shadow:var(--sh);padding:28px 24px}
+.price h3{font-size:23px;color:var(--ai)}
+.price .who{font-size:17px}
+.price .yen{font-family:var(--latin);font-weight:700;font-size:42px}
+.price .yen small{font-size:17px}
+.price ul{font-size:18px}
+.price .badge{font-size:16px;padding:4px 16px;background:var(--sky)}
+.adjust{border:2px dashed var(--sky);border-radius:var(--r)}
+.adjust b{font-size:21px}.adjust p{font-size:18px}
+.cont div{border:0;border-radius:var(--r);box-shadow:var(--sh)}
+.cont span{font-family:var(--latin);font-weight:700}
+.team div{background:#fff;border:0;border-left:5px solid var(--sky);border-radius:0 var(--r) var(--r) 0;box-shadow:var(--sh);padding:16px 20px}
+.team b{font-size:22px;color:var(--ai)}
+.team p{font-size:18px}
+.faq details{padding:20px 0}
+.faq summary{font-size:20px}
+.faq p{font-size:19px}
+.steps li::before{background:var(--sky);font-family:var(--latin);font-weight:700}
+.end{border-radius:28px}
+
+/* ---------- 年額診断 ---------- */
+.top{background:radial-gradient(1000px 420px at 90% -20%,#DCE8FA 0%,transparent 60%),#F7FAFE;color:var(--ink)}
+.top .eyebrow{color:var(--sky)}
+.top h1{color:var(--ai);font-weight:900}
+.top p{color:var(--ink2)}
+.prog{top:68px}
+.prog .wrap{font-size:17px}
+.prog span{border-bottom-width:4px}
+.prog span.on{color:var(--sky);border-color:var(--sky)}
+.step h2{font-size:clamp(24px,4vw,32px);color:var(--ai)}
+.cards button{font-size:18px;min-height:84px;border-radius:18px;border-width:2px;padding-left:46px}
+.cards small{font-size:15px}
+.cards button[aria-pressed=true]{border-color:var(--sky);background:var(--ail)}
+.cards button[aria-pressed=true]::before{background-color:var(--sky);border-color:var(--sky)}
+input[type=text],input[type=email],select,textarea{font-size:19px;padding:14px 16px;border-width:2px;border-radius:14px}
+.row b{font-size:19px}
+.row .u{font-size:16px}.row .del{font-size:16px}
+.stp button{width:52px;height:52px;font-size:26px;border-width:2px}
+.stp output{font-family:var(--latin);font-weight:700;font-size:28px}
+.seg button{font-size:19px;min-height:58px;border-width:2px;border-radius:14px}
+.seg button[aria-pressed=true]{background:var(--sky);border-color:var(--sky)}
+.res{border-radius:28px;background:linear-gradient(150deg,var(--ai),var(--ai2))}
+.res .big{font-family:var(--latin);font-weight:700}
+.res .sub2,.days{font-size:18px}
+.bars div{font-size:17px}
+form label{font-size:18px}
+form .opt{font-size:16px}
+.gq{font-size:21px}.gq b{font-size:26px}
+.gopt button{font-size:19px;border-color:var(--sky);color:var(--sky)}
+.gopt button:hover{background:var(--sky)}
+.chips span{font-size:16px}
+.pick-n{font-family:var(--latin);font-weight:700}
+.pv{font-size:17px}
+
+/* ---------- ご提案書ダッシュボード ---------- */
+body:has(.dash){background:var(--panel)}
+.dash{background:radial-gradient(1000px 400px at 90% -20%,#DCE8FA 0%,transparent 60%),#F7FAFE;color:var(--ink);padding:40px 0 48px}
+.dash .eyebrow{color:var(--sky)}
+.dash h1{color:var(--ai);font-weight:900;font-size:clamp(30px,5vw,44px)}
+.dash p{color:var(--ink2)}
+.kpi div{background:#fff;border:0;border-radius:var(--r);box-shadow:var(--sh);padding:16px 10px}
+.kpi b{font-family:var(--latin);font-weight:700;color:var(--ai);font-size:40px}
+.kpi span{font-size:16px;color:var(--mute);font-weight:700}
+.sample{font-size:17px;background:#FFF6DF;border:1.5px dashed #E2C27A;color:#6B4A0B}
+.cu{border-radius:var(--r);box-shadow:var(--sh);padding:22px;gap:8px}
+.cu .co{font-size:23px;color:var(--ai);font-weight:700}
+.cu .meta{font-size:17px}
+.cu .yen{font-family:var(--latin);font-weight:700;font-size:38px}
+.cu .yen small{font-size:16px}
+.cu .tk span{font-size:15px;padding:3px 12px}
+.cu .st{font-size:15px;padding:4px 12px}
+.cu .acts .btn{min-height:52px;font-size:18px;border-radius:14px}
+.ex h2{color:var(--ai);font-size:26px}
+.ex p{color:var(--ink2)}
+.thumbs img{box-shadow:var(--sh);border:1px solid var(--hair)}
+.tool{background:#fff;color:var(--ink);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:28px 0 32px}
+.tool h1{color:var(--ai);font-size:26px;font-weight:900}
+.tool p{color:var(--ink2);font-size:18px}
+.tool label{color:var(--ink);font-size:17px}
+.tool input,.tool select{font-size:19px;border:2px solid var(--hair);border-radius:12px;padding:12px 14px;background:#fff}
+.tool .acts .btn{min-height:56px;font-size:19px;border-radius:14px}
+.tool .acts .ghost{color:var(--ai);border-color:var(--ai)}
+.tool .msg{color:#0B7A3B;font-size:17px;font-weight:700}
+.manual-link{display:inline-flex;align-items:center;gap:.4em;margin-top:14px;font-weight:700;font-size:18px;color:var(--sky);text-decoration:underline;text-underline-offset:4px}
+@media print{body:has(.dash){background:#fff}}
+.dok{background:var(--cta)}
+.btn{background:var(--cta)}.btn:hover{background:var(--cta2)}.btn.ghost{background:#fff}
+.dash .eyebrow{color:var(--sky)!important}
+.btn.ghost,.ex .btn.ghost,.dash .btn.ghost{color:var(--ai)!important;border-color:var(--ai)!important;background:#fff!important}
+.cu .acts .btn{font-size:19px}
+.kpi span{font-size:15px;white-space:nowrap;display:block;line-height:1.4}
+.cu .co{font-size:21px;line-height:1.45}
+.top,.dash{position:relative;overflow:hidden}
+.top::after,.dash::after{content:"";position:absolute;width:480px;height:480px;right:-140px;top:-220px;border-radius:50%;background:#BFD6F7;filter:blur(60px);opacity:.7;animation:drift 16s ease-in-out infinite alternate;pointer-events:none}
+.top>.wrap,.dash>.wrap{position:relative;z-index:1}
+.top h1,.dash h1{animation:up .9s cubic-bezier(.2,.8,.2,1) both}
+.top p,.dash p{animation:up .9s .2s cubic-bezier(.2,.8,.2,1) both}
+@media(prefers-reduced-motion:reduce){.top::after,.dash::after,.top h1,.dash h1,.top p,.dash p{animation:none}}
+
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="https://agile-os.jp/"><b>AGILE</b><span>合同会社AGILE</span></a>
+  <a class="btn sm" href="./shindan/">無料で診断する</a>
+</div></header>
+
+<section class="fv">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap fvg"><div class="fvl">
+    <span class="badge"><b></b>法人向け　AI実装研修</span>
+    <h1><span class="ln">くり返しの事務は、</span><span class="ln"><em>AIに。</em></span><span class="ln">社員は、人にしか</span><span class="ln">できない仕事へ。</span></h1>
+    <p class="lead">人が辞めても、仕事が止まらない会社へ。御社の実際の仕事を教材に、2〜4名で12時間。受講した方が社内で教えられるところまで、AGILEが一緒に作ります。</p>
+    <div class="acts">
+      <a class="btn" href="./shindan/">無料で診断する（3分）</a>
+      <a class="btn ghost" href="#course">研修の中身を見る</a>
+    </div>
+    <ul class="stats">
+      <li><b class="num" data-to="12">12</b><span>時間で、<br>実務に入る</span></li>
+      <li><b class="num" data-to="4">4</b><span>名までの<br>少人数</span></li>
+      <li><b class="num" data-to="90">90</b><span>日間の<br>定着チェック</span></li>
+    </ul>
+    <p class="fvnote">オンラインで全国対応・訪問もできます</p>
+  </div>
+  <div class="stg" aria-hidden="true">
+    <span class="fl f1">議事録 → 自動で下書き</span>
+    <span class="fl f2">請求書 → 自動で作成</span>
+    <span class="fl f3">SNS → 自動で予約</span>
+    <div class="demo">
+      <div class="dh"><span></span><span></span><span></span><b>見積書の下書き</b><em id="dt">AIが作成中…</em></div>
+      <div class="db" id="db"></div>
+      <div class="dp"><i id="dpb"></i></div>
+      <div class="dok" id="dok">下書き完了　<b class="num">2</b>分<b class="num">48</b>秒</div>
+      <small>研修では、こういう下書きを御社の書式で作れるようにします</small>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="sec panel">
+  <div class="wrap rv">
+    <span class="eyebrow">Issue</span>
+    <h2>「AIを入れたほうがいい」のは、<br>分かっているけれど。</h2>
+    <ul class="pains">
+      <li>何から始めればいいのか、分からない</li>
+      <li>AIを契約したけれど、一部の人しか使っていない</li>
+      <li>研修を受けても、翌週にはいつものやり方に戻る</li>
+      <li>社内に、教える時間も教えられる人もいない</li>
+    </ul>
+    <p class="lead">足りないのは、知識より「自社の仕事に当てはめる時間」です。AGILEの研修は、そこに時間を使います。</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap rv">
+    <span class="eyebrow">Difference</span>
+    <h2>AGILEの研修の、3つの特徴</h2>
+    <div class="diff">
+      <article><div class="n num">01</div><h3>教材は、御社の仕事そのもの</h3><p>一冊のテキストを読む研修ではありません。監修された進め方（型）に沿って、御社の実際の資料や文面で練習するので、研修の時間がそのまま仕事になります。</p></article>
+      <article><div class="n num">02</div><h3>2〜4名に絞って、一人ずつ</h3><p>大人数の研修は、全員に共通の内容になりがちです。2〜4名なら、一人ひとりの仕事まで見られます。</p></article>
+      <article><div class="n num">03</div><h3>研修のあとも、定着まで</h3><p>研修は入口です。終わったあと90日、使い続けられているかを一緒に確かめ、社内に根づかせます。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec panel" id="calc">
+  <div class="wrap rv">
+    <span class="eyebrow">Free Check</span>
+    <h2>まず、その事務仕事が<br>年いくらかを出します</h2>
+    <p class="lead">研修のご提案より前に、無料の診断をしています。毎月くり返している事務仕事が、人件費でいくらにあたるかを数字にします。</p>
+    <div class="calc">
+      <div>
+        <label for="h">その仕事にかかる時間（ひと月）　<span class="v num" id="hv">20</span> 時間</label>
+        <input id="h" type="range" min="2" max="80" step="1" value="20">
+        <label style="margin-top:18px">担当する方の時給の目安</label>
+        <div class="seg" role="group" aria-label="時給">
+          <button type="button" data-w="2000" aria-pressed="false">2,000円</button>
+          <button type="button" data-w="2200" aria-pressed="true">2,200円</button>
+          <button type="button" data-w="2500" aria-pressed="false">2,500円</button>
+          <button type="button" data-w="3000" aria-pressed="false">3,000円</button>
+          <button type="button" data-w="3500" aria-pressed="false">3,500円</button>
+        </div>
+      </div>
+      <div class="out" aria-live="polite">
+        <div>1年で</div>
+        <div><span class="big" id="yen">53</span> 万円</div>
+        <div>ぶんの時間</div>
+        <small>いまその仕事にかかっている人件費の目安で、削れる額ではありません。どこまでAIに任せられるかは、診断で一緒に見ます。</small>
+      </div>
+    </div>
+    <p style="margin-top:26px"><a class="btn" href="./shindan/">仕事を選んで、くわしく診断する</a></p>
+    <p class="sub">入力した内容は、送信を押すまでどこにも届きません。</p>
+  </div>
+</section>
+
+<section class="sec" id="course">
+  <div class="wrap rv">
+    <span class="eyebrow">Program</span>
+    <h2>3時間×4回、計12時間</h2>
+    <p class="lead">1回で詰め込まず、あいだに実際の業務で使う期間を挟みます。社長さまには、1回目と4回目の同席をお願いしています。</p>
+    <ol class="flow4">
+      <li><div class="k">DAY 1</div><h3>任せる仕事を決める</h3><p>抱えている仕事を書き出し、AIに向くもの・向かないものを分けます。扱う情報の線引きも、ここで御社のルールにします。</p></li>
+      <li><div class="k">DAY 2</div><h3>実際の仕事でやってみる</h3><p>例題ではなく御社の資料や文面で。うまくいかない所を、その場で直しながら進めます。</p></li>
+      <li><div class="k">DAY 3</div><h3>毎回同じにできる形へ</h3><p>その人しかできない状態は、異動や退職で消えます。手順として残し、ほかの方でも使える形に整えます。</p></li>
+      <li><div class="k">DAY 4</div><h3>社内に広げる準備</h3><p>受講した方が社内で教えられる状態に。外に頼らなくても回る形がゴールです。</p></li>
+    </ol>
+    <ul class="after"><li>社長さまの同席は無料</li><li>研修費に含む：終了後30日の質問サポート</li><li>研修費に含む：30・60・90日の定着チェック</li></ul>
+  </div>
+</section>
+
+<section class="sec panel">
+  <div class="wrap rv">
+    <span class="eyebrow">Price</span>
+    <h2>人数と進め方で、3つのコース</h2>
+    <p class="lead">コースごとの基本の金額です。中身と金額は、御社に合わせて調整します。研修の前の無料診断（30〜45分）は、費用はかかりません。金額は税込です。</p>
+    <div class="price">
+      <article><h3>社長のAI相棒コース</h3><p class="who">1〜2名・計6時間（2時間×3回）</p><div class="yen num">350,000<small>円</small></div><ul><li>社長さまご自身の仕事から</li><li>ご家族経営・少人数の会社に</li></ul></article>
+      <article class="main"><span class="badge">主力のコース</span><h3>選抜チーム研修</h3><p class="who">2〜4名・計12時間（3時間×4回）</p><div class="yen num">660,000<small>円 オンライン</small></div><div class="yen num" style="font-size:28px">880,000<small>円 訪問</small></div><ul><li>このページでご紹介している研修です</li><li>扱う仕事は1人1つ、計3つまで</li></ul></article>
+      <article><h3>複数班の研修</h3><p class="who">5名以上・計12時間</p><div class="yen num" style="font-size:30px">990,000<small>円 2班・5〜8名</small></div><div class="yen num" style="font-size:30px">1,320,000<small>円 3班・9〜12名</small></div><ul><li>班に分けて実施します</li></ul></article>
+    </div>
+    <div class="adjust"><b>御社に合わせて組み直します</b><p>人数・扱う仕事・回数・オンラインか訪問かは、御社の事情に合わせて変えられます。上の金額を基本に、無料診断のあとで御社用のお見積をお出しします。「この予算の中でできる形」からのご相談も大丈夫です。</p></div>
+    <h3 style="margin-top:40px;font-size:22px">研修のあと、続けたい会社さまへ</h3>
+    <div class="cont">
+      <div><b>教室会員</b><span class="num">11,000</span>円／月<br><small class="note">オンラインの教室と、御社専用のAI相棒で質問できます</small></div>
+      <div><b>顧問</b><span class="num">55,000</span>円／月<br><small class="note">月1回60分の定着ミーティングと、メールでの質問対応（2営業日以内にお返事）</small></div>
+    </div>
+    <p class="note" style="margin-top:14px">どちらも研修が終わったあと、ご希望の会社さまだけです。研修費のほかにかかるもの：受講する方のAIの有料プラン（すでにお使いの契約があれば追加はありません）、訪問の場合の交通費（八王子市外のみ・実費）。お支払いは研修の前に、銀行振込で一括です。</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap rv">
+    <span class="eyebrow">Subsidy</span>
+    <h2>条件が合えば、<br>助成金が使えることがあります</h2>
+    <p class="lead">従業員の方が受講される場合、人材開発支援助成金の対象になることがあります。対象になるか、いくら戻るかは、労働局が研修の中身を見て個別に判断します。</p>
+    <ul style="padding-left:1.2em;color:var(--ink2)">
+      <li>助成が付くのは、雇用保険に入っている方の受講分だけです。社長さま・役員さまの分は対象になりません</li>
+      <li>申請の手続きは、顧問の社会保険労務士さま、または労働局へお願いしています。AGILEは書類の作成・提出を代行しません</li>
+      <li>「助成金が出るぶん安くします」という形は取りません。不支給の理由になるためです</li>
+      <li>計画届は、研修を始める日の1か月前までに出す必要があります。日程には余裕を持ってご相談ください</li>
+      <li>顧問の社労士さまがいない場合は、労働局へのご相談の仕方をお伝えします。計画届に使うカリキュラムや講師の経歴などの資料は、AGILEからお渡しします</li>
+    </ul>
+    <p class="note">AGILEでは、使える可能性のある制度の洗い出しまでをお手伝いします。可否の判断は社会保険労務士さま・労働局です。</p>
+  </div>
+</section>
+
+<section class="sec panel">
+  <div class="wrap rv">
+    <span class="eyebrow">Team</span>
+    <h2>八王子の、3人の経営支援チームです</h2>
+    <p class="lead">AGILEは、育成・資金・AIの3つの持ち場をもつ3人の経営支援チームです（2026年11月に合同会社として設立）。研修の前後で、それぞれが御社に関わります。</p>
+    <div class="team">
+      <div><b>人を育てる</b><p>研修のあと、使い続けられる人と仕組みを育てる設計を担います。</p></div>
+      <div><b>お金と制度</b><p>研修にかかるお金と、使える制度の洗い出しを一緒に整理します。</p></div>
+      <div><b>AIを仕事に入れる</b><p>研修の中身と講師。AIを毎日の仕事で使っているメンバーが担当します。</p></div>
+    </div>
+    <p class="sub">研修の進め方と中身の監修は、fulfull株式会社です。fulfullはこれまで企業研修25社を担当してきました。合同会社AGILEとしての研修は、これからです。ご契約は合同会社AGILEと結びます。</p>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap rv">
+    <span class="eyebrow">Q&amp;A</span>
+    <h2>よくいただくご質問</h2>
+    <details><summary>AIを触ったことがない社員でも大丈夫ですか</summary><p>大丈夫です。初日は環境の準備から始めます。画面を共有しながら一緒に手を動かすので、初めての方のほうが多いくらいです。</p></details>
+    <details><summary>社員が1人でも頼めますか</summary><p>頼めます。1〜2名なら「社長のAI相棒コース」、2〜4名なら「選抜チーム研修」が目安です。</p></details>
+    <details><summary>どのAIを使いますか</summary><p>すでにお使いのものがあれば、それに合わせます。ご指定がなければ、業務に向いたものをご提案します。特定の製品を売ることはありません。</p></details>
+    <details><summary>社外に出せない情報を扱う仕事でも使えますか</summary><p>扱う情報の線引きは、初日に一緒に決めます。何を入れてよく、何を入れてはいけないかを、御社のルールとして残すところまでが研修です。</p></details>
+    <details><summary>どのくらい効果が出ますか</summary><p>削減額は、無料の診断で御社の数字を出してから一緒に見ます。仕事によって差が大きいため、金額のお約束はしていません。数字を見てからご判断いただく形です。</p></details>
+    <details><summary>八王子以外でも頼めますか</summary><p>オンラインなら全国対応しています。訪問の場合は、交通費を別にいただくことがあります。</p></details>
+  </div>
+</section>
+
+<section class="sec panel">
+  <div class="wrap rv">
+    <span class="eyebrow">Flow</span>
+    <h2>お問い合わせから、研修のあとまで</h2>
+    <ol class="steps">
+      <li>無料の診断（このページから3分）</li>
+      <li>オンラインで30〜45分、数字を一緒に確かめる</li>
+      <li>診断の結果をもとに、内容と日程をご提案</li>
+      <li>助成金を使う場合は、社労士さまと計画届の日程を調整</li>
+      <li>研修（3時間×4回）</li>
+      <li>終了後30日の質問サポートと、90日の定着チェック</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="end rv">
+      <h2>まずは、御社の数字を<br>見てから決めませんか。</h2>
+      <p class="lead">その仕事が年いくらにあたるのか。見てから、やるかどうかを決めていただければ十分です。</p>
+      <a class="btn" href="./shindan/">無料で診断する（3分）</a>
+      <p class="note" style="margin-top:16px">診断だけで終わっても、費用はかかりません。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="ft"><div class="wrap">
+  <b>AGILE</b>
+  <p>合同会社AGILE　東京都八王子市</p>
+  <p>お問い合わせ：<a href="https://agile-os.jp/#contact">agile-os.jp のフォーム</a>／agileos.info@gmail.com</p>
+  <p>研修の進め方と中身の監修：fulfull株式会社</p>
+</div></footer>
+
+<script>
+(function(){
+  var h=document.getElementById('h'),hv=document.getElementById('hv'),yen=document.getElementById('yen'),w=2200;
+  var btns=document.querySelectorAll('.calc .seg button');
+  function calc(){var v=Math.round(+h.value*w*12/10000);hv.textContent=h.value;yen.textContent=v.toLocaleString();}
+  h.addEventListener('input',calc);
+  btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');w=+b.dataset.w;calc();});});
+  calc();
+  var TXT='件名：空調設備 定期点検のお見積り\n\n1. 点検作業（2名×半日）　 48,000円\n2. フィルター交換（6台）　 18,600円\n3. 出張費　　　　　　　　　 5,000円\n――――――――――――――\n合計（税込）　　　　　　　78,760円\n\n※過去の見積3件の書き方にそろえました',db=document.getElementById('db'),pb=document.getElementById('dpb'),ok=document.getElementById('dok'),dt=document.getElementById('dt');
+  var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function type(){var i=0;ok.classList.remove('in');dt.textContent='AIが作成中…';
+    if(red){db.textContent=TXT;pb.style.width='100%';ok.classList.add('in');dt.textContent='確認待ち';return}
+    (function t(){i+=1+(Math.random()<.3?1:0);db.innerHTML=TXT.slice(0,i).replace(/&/g,'&amp;').replace(/</g,'&lt;')+'<span class="cur"></span>';pb.style.width=Math.min(100,i/TXT.length*100)+'%';
+      if(i<TXT.length)setTimeout(t,38);else{ok.classList.add('in');dt.textContent='確認待ち';setTimeout(type,5200)}})()}
+  setTimeout(type,700);
+  var cv=document.getElementById('dust');if(cv&&!red){var cx=cv.getContext('2d'),P=[],W,H;function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+    for(var k=0;k<46;k++)P.push({x:Math.random(),y:Math.random(),r:.6+Math.random()*1.8,v:.0004+Math.random()*.0012,a:Math.random()*6});
+    (function d(){cx.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.a+=.02;if(p.y<0)p.y=1;cx.globalAlpha=.25+.35*Math.sin(p.a);cx.fillStyle='#CFE0F5';cx.beginPath();cx.arc(p.x*W,p.y*H,p.r,0,7);cx.fill()});requestAnimationFrame(d)})()}
+  var ns=document.querySelectorAll('.stats [data-to]');if(!red){ns.forEach(function(n){var to=+n.dataset.to,t0=null;n.textContent='0';function st(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1400);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)}setTimeout(function(){requestAnimationFrame(st)},900)})}
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+  else els.forEach(function(e){e.classList.add('in')});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},2500);
+})();
+</script>
+</body>
+</html>
