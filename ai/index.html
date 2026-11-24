@@ -357,6 +357,14 @@ body:has(.dash){background:var(--panel)}
 .top p,.dash p{animation:up .9s .2s cubic-bezier(.2,.8,.2,1) both}
 @media(prefers-reduced-motion:reduce){.top::after,.dash::after,.top h1,.dash h1,.top p,.dash p{animation:none}}
 
+.flow3{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px;counter-reset:f}
+@media(min-width:900px){.flow3{grid-template-columns:repeat(3,1fr)}}
+.flow3 li{counter-increment:f;background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:22px 22px 22px 76px;position:relative}
+.flow3 li::before{content:counter(f);position:absolute;left:20px;top:22px;width:40px;height:40px;border-radius:50%;background:var(--sky);color:#fff;font-family:var(--latin);font-weight:700;font-size:22px;display:grid;place-items:center}
+.flow3 b{display:block;font-family:var(--serif);font-size:21px;color:var(--ai);line-height:1.45}
+.flow3 span{display:block;margin-top:4px;font-size:18px;color:var(--ink2)}
+.cont small{display:block;margin-top:4px;font-size:17px}
+
 </style>
 </head>
 <body>
@@ -470,21 +478,26 @@ body:has(.dash){background:var(--panel)}
 
 <section class="sec panel">
   <div class="wrap rv">
-    <span class="eyebrow">Price</span>
-    <h2>人数と進め方で、3つのコース</h2>
-    <p class="lead">コースごとの基本の金額です。中身と金額は、御社に合わせて調整します。研修の前の無料診断（30〜45分）は、費用はかかりません。金額は税込です。</p>
+    <span class="eyebrow">Plan &amp; Price</span>
+    <h2>研修の形と費用は、<br>御社に合わせて決めます</h2>
+    <p class="lead">人数も、扱う仕事も、会社ごとに違います。だから、決まった料金表ではなく、無料の診断で御社の数字を見てから、ちょうどいい形と費用をご提案します。</p>
     <div class="price">
-      <article><h3>社長のAI相棒コース</h3><p class="who">1〜2名・計6時間（2時間×3回）</p><div class="yen num">350,000<small>円</small></div><ul><li>社長さまご自身の仕事から</li><li>ご家族経営・少人数の会社に</li></ul></article>
-      <article class="main"><span class="badge">主力のコース</span><h3>選抜チーム研修</h3><p class="who">2〜4名・計12時間（3時間×4回）</p><div class="yen num">660,000<small>円 オンライン</small></div><div class="yen num" style="font-size:28px">880,000<small>円 訪問</small></div><ul><li>このページでご紹介している研修です</li><li>扱う仕事は1人1つ、計3つまで</li></ul></article>
-      <article><h3>複数班の研修</h3><p class="who">5名以上・計12時間</p><div class="yen num" style="font-size:30px">990,000<small>円 2班・5〜8名</small></div><div class="yen num" style="font-size:30px">1,320,000<small>円 3班・9〜12名</small></div><ul><li>班に分けて実施します</li></ul></article>
+      <article><h3>社長のAI相棒コース</h3><p class="who">1〜2名・計6時間（2時間×3回）</p><ul><li>社長さまご自身の仕事から</li><li>ご家族経営・少人数の会社に</li></ul></article>
+      <article class="main"><span class="badge">いちばん多い形</span><h3>選抜チーム研修</h3><p class="who">2〜4名・計12時間（3時間×4回）</p><ul><li>このページでご紹介している研修です</li><li>扱う仕事は1人1つ、計3つまで</li><li>オンライン・訪問のどちらでも</li></ul></article>
+      <article><h3>複数班の研修</h3><p class="who">5名以上・計12時間</p><ul><li>班に分けて実施します</li><li>部署ごと・拠点ごとにも</li></ul></article>
     </div>
-    <div class="adjust"><b>御社に合わせて組み直します</b><p>人数・扱う仕事・回数・オンラインか訪問かは、御社の事情に合わせて変えられます。上の金額を基本に、無料診断のあとで御社用のお見積をお出しします。「この予算の中でできる形」からのご相談も大丈夫です。</p></div>
+    <ol class="flow3">
+      <li><b>無料の診断（30〜45分）</b><span>毎月の事務仕事が年いくらにあたるかを、一緒に数字にします。</span></li>
+      <li><b>御社用のご提案</b><span>研修の形と費用を、1枚の提案書にしてお渡しします。「この予算の中でできる形」からのご相談も大丈夫です。</span></li>
+      <li><b>ご納得いただいてから</b><span>ご提案を見てから、やるかどうかをお決めください。診断だけで終わっても、費用はかかりません。</span></li>
+    </ol>
     <h3 style="margin-top:40px;font-size:22px">研修のあと、続けたい会社さまへ</h3>
     <div class="cont">
-      <div><b>教室会員</b><span class="num">11,000</span>円／月<br><small class="note">オンラインの教室と、御社専用のAI相棒で質問できます</small></div>
-      <div><b>顧問</b><span class="num">55,000</span>円／月<br><small class="note">月1回60分の定着ミーティングと、メールでの質問対応（2営業日以内にお返事）</small></div>
+      <div><b>教室会員</b><small class="note">オンラインの教室と、御社専用のAI相棒で質問できます</small></div>
+      <div><b>顧問</b><small class="note">月1回60分の定着ミーティングと、メールでの質問対応（2営業日以内にお返事）</small></div>
     </div>
-    <p class="note" style="margin-top:14px">どちらも研修が終わったあと、ご希望の会社さまだけです。研修費のほかにかかるもの：受講する方のAIの有料プラン（すでにお使いの契約があれば追加はありません）、訪問の場合の交通費（八王子市外のみ・実費）。お支払いは研修の前に、銀行振込で一括です。</p>
+    <p class="note" style="margin-top:14px">どちらも研修が終わったあと、ご希望の会社さまだけです。費用は、研修のご提案とあわせてお伝えします。研修のほかに、受講する方のAIの有料プラン（すでにお使いの契約があれば追加はありません）が必要です。</p>
+    <p style="margin-top:26px"><a class="btn" href="./shindan/">まずは無料で診断する（3分）</a></p>
   </div>
 </section>
 
